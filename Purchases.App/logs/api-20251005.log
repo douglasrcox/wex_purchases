@@ -1,0 +1,349 @@
+2025-10-05 19:52:31.807 -05:00 [INF] HTTP GET /swagger responded 301 in 6.9705 ms
+2025-10-05 19:52:32.026 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 67.7419 ms
+2025-10-05 19:52:32.155 -05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 73.1312 ms
+2025-10-05 19:52:32.156 -05:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 72.6506 ms
+2025-10-05 19:52:32.168 -05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 3.0365 ms
+2025-10-05 19:52:32.191 -05:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 110.5004 ms
+2025-10-05 19:52:32.809 -05:00 [INF] HTTP GET /swagger/favicon-16x16.png responded 200 in 0.1994 ms
+2025-10-05 19:52:32.822 -05:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js responded 200 in 13.3700 ms
+2025-10-05 19:52:34.167 -05:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 6.7647 ms
+2025-10-05 19:53:11.005 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-10-05 19:53:11.209 -05:00 [INF] LiteDB initialized at C:\Users\Doug\source\repos\Purchases.App\Purchases.App\data\purchases.db
+2025-10-05 19:53:11.332 -05:00 [INF] Stored purchase "50ca789d-8384-4e95-a0ab-5a54a0dd9f71" (string)
+2025-10-05 19:53:11.335 -05:00 [INF] Added purchase "50ca789d-8384-4e95-a0ab-5a54a0dd9f71" on "2025-10-06T00:00:00.0000000Z" for 0.10
+2025-10-05 19:53:11.357 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 358.9804 ms
+2025-10-05 19:55:01.678 -05:00 [INF] HTTP GET /api/Purchases/50ca789d-8384-4e95-a0ab-5a54a0dd9f71/convert responded 400 in 17.6173 ms
+2025-10-05 19:55:10.565 -05:00 [WRN] Validation error
+System.ArgumentException: Currency must be a 3-letter code.
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 13
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:55:10.603 -05:00 [INF] HTTP GET /api/Purchases/50ca789d-8384-4e95-a0ab-5a54a0dd9f71/convert responded 400 in 270.6167 ms
+2025-10-05 19:55:16.873 -05:00 [WRN] Validation error
+System.ArgumentException: Currency must be a 3-letter code.
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 13
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:55:16.878 -05:00 [INF] HTTP GET /api/Purchases/50ca789d-8384-4e95-a0ab-5a54a0dd9f71/convert responded 400 in 119.2751 ms
+2025-10-05 19:55:23.026 -05:00 [WRN] Validation error
+System.ArgumentException: Currency must be a 3-letter code.
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 13
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:55:23.030 -05:00 [INF] HTTP GET /api/Purchases/50ca789d-8384-4e95-a0ab-5a54a0dd9f71/convert responded 400 in 110.7744 ms
+2025-10-05 19:55:31.460 -05:00 [INF] Fetching rate for USD as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 19:55:32.103 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '586.4044'
+2025-10-05 19:55:32.449 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:55:32.453 -05:00 [INF] HTTP GET /api/Purchases/50ca789d-8384-4e95-a0ab-5a54a0dd9f71/convert responded 422 in 994.6933 ms
+2025-10-05 19:56:33.258 -05:00 [INF] Fetching rate for USD as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 19:56:33.420 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '159.2698'
+2025-10-05 19:56:33.733 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:56:33.738 -05:00 [INF] HTTP GET /api/Purchases/50ca789d-8384-4e95-a0ab-5a54a0dd9f71/convert responded 422 in 480.6743 ms
+2025-10-05 19:56:48.933 -05:00 [INF] Stored purchase "5b42e23e-1f22-4b53-8f1d-68103d0a9334" (string)
+2025-10-05 19:56:48.938 -05:00 [INF] Added purchase "5b42e23e-1f22-4b53-8f1d-68103d0a9334" on "2025-10-06T00:00:00.0000000Z" for 0.10
+2025-10-05 19:56:48.941 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 9.8443 ms
+2025-10-05 19:57:01.632 -05:00 [INF] Stored purchase "7909ceb8-a4e7-49af-8bc2-483756f073b1" (string)
+2025-10-05 19:57:01.633 -05:00 [INF] Added purchase "7909ceb8-a4e7-49af-8bc2-483756f073b1" on "2025-10-06T00:00:00.0000000Z" for 0.20
+2025-10-05 19:57:01.635 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 3.6950 ms
+2025-10-05 19:57:17.668 -05:00 [INF] Fetching rate for USD as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 19:57:17.823 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '153.4252'
+2025-10-05 19:57:18.093 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:57:18.098 -05:00 [INF] HTTP GET /api/Purchases/7909ceb8-a4e7-49af-8bc2-483756f073b1/convert responded 422 in 431.2272 ms
+2025-10-05 19:57:35.069 -05:00 [WRN] Not found
+System.Collections.Generic.KeyNotFoundException: Purchase 3fa85f64-5717-4562-b3fc-2c963f66afa6 not found.
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 37
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:57:35.073 -05:00 [INF] HTTP GET /api/Purchases/3fa85f64-5717-4562-b3fc-2c963f66afa6/convert responded 404 in 72.8841 ms
+2025-10-05 19:58:22.986 -05:00 [WRN] Not found
+System.Collections.Generic.KeyNotFoundException: Purchase 3fa85f64-5717-4562-b3fc-2c963f66afa6 not found.
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 37
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 19:58:22.989 -05:00 [INF] HTTP GET /api/Purchases/3fa85f64-5717-4562-b3fc-2c963f66afa6/convert responded 404 in 69.8349 ms
+2025-10-05 20:02:33.005 -05:00 [INF] HTTP POST /api/Purchases responded 400 in 4.5568 ms
+2025-10-05 20:03:01.099 -05:00 [INF] HTTP POST /api/Purchases responded 400 in 4.6683 ms
+2025-10-05 20:03:25.720 -05:00 [INF] Stored purchase "c67d8931-dbba-4f71-b586-d3b76194ceb0" (Test)
+2025-10-05 20:03:25.726 -05:00 [INF] Added purchase "c67d8931-dbba-4f71-b586-d3b76194ceb0" on "2025-10-06T00:00:00.0000000Z" for 0.20
+2025-10-05 20:03:25.728 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 12.9887 ms
+2025-10-05 20:08:07.398 -05:00 [INF] Fetching rate for USD as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:08:07.874 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '474.2546'
+2025-10-05 20:08:08.164 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:08:08.168 -05:00 [INF] HTTP GET /api/Purchases/c67d8931-dbba-4f71-b586-d3b76194ceb0/convert responded 422 in 794.6376 ms
+2025-10-05 20:08:19.762 -05:00 [INF] Fetching rate for ASS as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:08:19.916 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '152.5621'
+2025-10-05 20:08:20.183 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:08:20.187 -05:00 [INF] HTTP GET /api/Purchases/c67d8931-dbba-4f71-b586-d3b76194ceb0/convert responded 422 in 425.6604 ms
+2025-10-05 20:08:24.846 -05:00 [INF] Fetching rate for ASF as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:08:25.000 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '152.8939'
+2025-10-05 20:08:25.269 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:08:25.272 -05:00 [INF] HTTP GET /api/Purchases/c67d8931-dbba-4f71-b586-d3b76194ceb0/convert responded 422 in 427.2607 ms
+2025-10-05 20:08:37.325 -05:00 [WRN] Validation error
+System.ArgumentException: Currency must be a 3-letter code.
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 13
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:08:37.329 -05:00 [INF] HTTP GET /api/Purchases/c67d8931-dbba-4f71-b586-d3b76194ceb0/convert responded 400 in 119.9398 ms
+2025-10-05 20:09:04.977 -05:00 [INF] Fetching rate for EUR as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:09:05.231 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '252.0293'
+2025-10-05 20:09:05.491 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:09:05.494 -05:00 [INF] HTTP GET /api/Purchases/c67d8931-dbba-4f71-b586-d3b76194ceb0/convert responded 422 in 522.3772 ms
+2025-10-05 20:09:18.956 -05:00 [INF] Stored purchase "6575b6f6-fc38-4f4b-a3f8-56adec93156e" (Test)
+2025-10-05 20:09:18.958 -05:00 [INF] Added purchase "6575b6f6-fc38-4f4b-a3f8-56adec93156e" on "2025-10-06T00:00:00.0000000Z" for 2
+2025-10-05 20:09:18.959 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 4.6460 ms
+2025-10-05 20:09:29.987 -05:00 [INF] Fetching rate for EUR as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:09:30.222 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '232.3757'
+2025-10-05 20:09:30.483 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:09:30.488 -05:00 [INF] HTTP GET /api/Purchases/6575b6f6-fc38-4f4b-a3f8-56adec93156e/convert responded 422 in 501.5990 ms
+2025-10-05 20:10:50.357 -05:00 [INF] Fetching rate for EUR as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:10:50.878 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: '519.5396'
+2025-10-05 20:10:51.148 -05:00 [WRN] Business rule error
+System.InvalidOperationException: Exchange rate endpoint not found (404).
+   at Purchases.App.Rates.TreasuryExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\TreasuryExchangeRateClient.cs:line 29
+   at Purchases.App.Rates.CachingExchangeRateClient.GetRateAsync(String currency, DateTime asOfDate, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Rates\CachingExchangeRateClient.cs:line 23
+   at Purchases.App.Services.PurchaseService.GetConvertedAsync(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Services\PurchaseService.cs:line 38
+   at Purchases.App.Controllers.PurchasesController.Convert(Guid id, String currency, CancellationToken ct) in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Controllers\PurchasesController.cs:line 23
+   at lambda_method24(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Program.<>c.<<<Main>$>b__0_5>d.MoveNext() in C:\Users\Doug\source\repos\Purchases.App\Purchases.App\Program.cs:line 103
+2025-10-05 20:10:51.152 -05:00 [INF] HTTP GET /api/Purchases/6575b6f6-fc38-4f4b-a3f8-56adec93156e/convert responded 422 in 60686.4537 ms
+2025-10-05 20:31:25.165 -05:00 [INF] HTTP GET /swagger responded 301 in 2.9118 ms
+2025-10-05 20:31:25.318 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 68.7786 ms
+2025-10-05 20:31:25.401 -05:00 [INF] HTTP GET /swagger/swagger-ui.css responded 200 in 24.5004 ms
+2025-10-05 20:31:25.402 -05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 22.7074 ms
+2025-10-05 20:31:25.436 -05:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js responded 200 in 28.0296 ms
+2025-10-05 20:31:27.058 -05:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 14.8213 ms
+2025-10-05 20:31:27.106 -05:00 [INF] HTTP GET /swagger/favicon-16x16.png responded 200 in 0.2863 ms
+2025-10-05 20:31:39.704 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-10-05 20:31:39.881 -05:00 [INF] LiteDB initialized at C:\Users\Doug\source\repos\Purchases.App\Purchases.App\data\purchases.db
+2025-10-05 20:31:39.996 -05:00 [INF] Stored purchase "5de70a5a-0d8e-45b8-88d5-7eaa481700ad" (string)
+2025-10-05 20:31:39.999 -05:00 [INF] Added purchase "5de70a5a-0d8e-45b8-88d5-7eaa481700ad" on "2025-10-06T00:00:00.0000000Z" for 20
+2025-10-05 20:31:40.020 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 318.2314 ms
+2025-10-05 20:32:23.809 -05:00 [INF] Fetching rate for USD as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:32:24.524 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: '677.2152'
+2025-10-05 20:32:24.537 -05:00 [INF] Using USD rate 70.13 (per USD) from "2025-06-30T00:00:00.0000000"
+2025-10-05 20:32:24.541 -05:00 [INF] Rate cache set exrate::USD::2025-10
+2025-10-05 20:32:24.548 -05:00 [INF] HTTP GET /api/Purchases/5de70a5a-0d8e-45b8-88d5-7eaa481700ad/convert responded 200 in 20133.7786 ms
+2025-10-05 20:33:25.653 -05:00 [INF] HTTP GET /swagger responded 301 in 3.7157 ms
+2025-10-05 20:33:25.801 -05:00 [INF] HTTP GET /swagger/index.html responded 200 in 47.1683 ms
+2025-10-05 20:33:27.526 -05:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 19.9565 ms
+2025-10-05 20:33:37.102 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-10-05 20:33:37.184 -05:00 [INF] LiteDB initialized at C:\Users\Doug\source\repos\Purchases.App\Purchases.App\data\purchases.db
+2025-10-05 20:33:37.287 -05:00 [INF] Stored purchase "2835c6ec-b4d1-42cc-9286-66aa75f23cdb" (string)
+2025-10-05 20:33:37.291 -05:00 [INF] Added purchase "2835c6ec-b4d1-42cc-9286-66aa75f23cdb" on "2025-10-06T00:00:00.0000000Z" for 20
+2025-10-05 20:33:37.315 -05:00 [INF] HTTP POST /api/Purchases responded 201 in 216.1969 ms
+2025-10-05 20:34:42.168 -05:00 [INF] Fetching rate for EUR as of "2025-10-05T19:00:00.0000000-05:00" (window start "2025-04-05T00:00:00.0000000-05:00")
+2025-10-05 20:34:42.878 -05:00 [INF] Execution attempt. Source: 'TreasuryExchangeRateClient-exrates//Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: '674.5696'
+2025-10-05 20:34:42.894 -05:00 [INF] Using EUR rate 70.13 (per USD) from "2025-06-30T00:00:00.0000000"
+2025-10-05 20:34:42.899 -05:00 [INF] Rate cache set exrate::EUR::2025-10
+2025-10-05 20:34:42.910 -05:00 [INF] HTTP GET /api/Purchases/2835c6ec-b4d1-42cc-9286-66aa75f23cdb/convert responded 200 in 780.8817 ms

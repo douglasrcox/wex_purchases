@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- logging -->
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+
+    <!-- persistence -->
+    <PackageReference Include="LiteDB" Version="5.0.17" />
+
+    <!-- swagger -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+
+    <!-- caching -->
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
+
+    <!-- polly core + http integration -->
+    <PackageReference Include="Polly" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="8.4.0" />
+    <!-- ^ this brings in AddResilienceHandler(...) for IHttpClientBuilder -->
+  </ItemGroup>
+</Project>
